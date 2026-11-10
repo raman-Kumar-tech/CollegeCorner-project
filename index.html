@@ -4,15 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CampusHub | College Corner & Academic Portal</title>
+  
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- FontAwesome for crisp university & UI icons -->
+  
+  <!-- FontAwesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  
   <!-- Google Fonts: Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  
+
+  <!-- External Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
   <script>
     tailwind.config = {
       theme: {
@@ -35,30 +41,10 @@
       }
     }
   </script>
-  <style>
-    /* Custom marquee animation */
-    @keyframes marquee {
-      0% { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
-    .animate-marquee {
-      display: inline-block;
-      white-space: nowrap;
-      animation: marquee 28s linear infinite;
-    }
-    .animate-marquee:hover {
-      animation-play-state: paused;
-    }
-    /* Modal Backdrop Transitions */
-    .modal-backdrop {
-      background-color: rgba(15, 23, 42, 0.7);
-      backdrop-filter: blur(4px);
-    }
-  </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-  <!-- Toast Container -->
+  <!-- Toast Notification Container -->
   <div id="toast-container" class="fixed bottom-5 right-5 z-50 flex flex-col gap-2 pointer-events-none"></div>
 
   <!-- STICKY HEADER / NAVIGATION -->
@@ -197,7 +183,7 @@
                   </div>
                   <div>
                     <h3 class="font-bold text-slate-800 text-sm">Campus Information</h3>
-                    <p class="text-xs text-slate-500">GRIMT College & NAAC 'A+'</p>
+                    <p class="text-xs text-slate-500">GRIMT College &amp; NAAC 'A+'</p>
                   </div>
                 </div>
                 <span class="px-2.5 py-1 text-[11px] font-semibold bg-emerald-50 text-emerald-700 rounded-full border border-emerald-200">Session 2026-27</span>
@@ -235,12 +221,6 @@
                   </div>
                 </div>
               </div>
-
-              <!-- <div class="pt-2">
-                <a href="#attendance" class="w-full block py-2.5 text-center text-xs font-semibold text-brand-600 bg-brand-50 hover:bg-brand-100 rounded-xl transition-colors">
-                  Try Sample Roll: <span class="font-mono underline">4623010 (Raman Kumar)</span> or <span class="font-mono underline">22BCSE101</span> →
-                </a>
-              </div> -->
             </div>
           </div>
 
@@ -257,7 +237,7 @@
             <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 text-indigo-700 mb-2">
               <i class="fa-regular fa-calendar-days"></i> College Life
             </div>
-            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Upcoming Events & Hackathons</h2>
+            <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Upcoming Events &amp; Hackathons</h2>
             <p class="text-slate-500 text-sm mt-1">Participate, network, and showcase your skills across departmental and inter-college fests.</p>
           </div>
 
@@ -335,7 +315,7 @@
           <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200 mb-2">
             <i class="fa-solid fa-graduation-cap"></i> Academic Repository
           </div>
-          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Study Material & Lecture Notes</h2>
+          <h2 class="text-3xl font-extrabold text-slate-900 tracking-tight">Study Material &amp; Lecture Notes</h2>
           <p class="text-slate-500 text-sm mt-1">Select your course, semester, and subject to browse vetted lecture slides, syllabus outlines, and e-books.</p>
         </div>
 
@@ -347,7 +327,7 @@
               <select id="study-course" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-medium focus:ring-2 focus:ring-brand-500 focus:outline-none">
                 <option value="all">All Courses</option>
                 <option value="B.Tech CSE">B.Tech Computer Science (CSE)</option>
-                <option value="B.Tech ECE">B.Tech Electronics & Comm (ECE)</option>
+                <option value="B.Tech ECE">B.Tech Electronics &amp; Comm (ECE)</option>
                 <option value="BCA">Bachelor of Computer Apps (BCA)</option>
                 <option value="MCA">Master of Computer Apps (MCA)</option>
               </select>
@@ -372,7 +352,7 @@
               <label for="study-subject" class="block text-xs font-bold text-slate-700 uppercase tracking-wider mb-2">3. Subject</label>
               <select id="study-subject" class="w-full bg-white border border-slate-300 rounded-xl px-4 py-2.5 text-sm font-medium focus:ring-2 focus:ring-brand-500 focus:outline-none">
                 <option value="all">All Subjects</option>
-                <option value="Data Structures & Algorithms">Data Structures & Algorithms</option>
+                <option value="Data Structures & Algorithms">Data Structures &amp; Algorithms</option>
                 <option value="Operating Systems">Operating Systems</option>
                 <option value="Database Management (DBMS)">Database Management (DBMS)</option>
                 <option value="Web Technologies">Web Technologies</option>
@@ -465,8 +445,8 @@
             <table class="w-full text-left text-sm">
               <thead class="bg-slate-50 text-slate-500 font-semibold border-b border-slate-200 uppercase text-[11px] tracking-wider">
                 <tr>
-                  <th class="py-4 px-6">Subject & Paper Title</th>
-                  <th class="py-4 px-6">Course & Sem</th>
+                  <th class="py-4 px-6">Subject &amp; Paper Title</th>
+                  <th class="py-4 px-6">Course &amp; Sem</th>
                   <th class="py-4 px-6">Exam Type</th>
                   <th class="py-4 px-6">Year</th>
                   <th class="py-4 px-6 text-center">Action</th>
@@ -509,7 +489,7 @@
                 <input 
                   type="text" 
                   id="roll-input" 
-                  placeholder="e.g. 4623010 " 
+                  placeholder="e.g. 4623010" 
                   required
                   class="w-full pl-11 pr-4 py-3.5 bg-white border border-slate-300 rounded-2xl text-base font-semibold uppercase tracking-wider text-slate-800 placeholder:normal-case placeholder:font-normal placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent transition"
                 />
@@ -520,9 +500,6 @@
             <div class="flex items-center flex-wrap gap-2 text-xs text-slate-500">
               <span class="font-medium">Quick sample rolls:</span>
               <button type="button" onclick="setRoll('4623010')" class="px-2.5 py-1 bg-brand-50 hover:bg-brand-100 border border-brand-300 rounded-lg font-mono font-bold text-brand-700 transition shadow-sm">4623010 (Raman Kumar - 87.8%)</button>
-              <!-- <button type="button" onclick="setRoll('22BCSE101')" class="px-2.5 py-1 bg-white hover:bg-slate-200 border border-slate-200 rounded-lg font-mono font-bold text-brand-600 transition">22BCSE101 (84.2%)</button>
-              <button type="button" onclick="setRoll('22BCSE102')" class="px-2.5 py-1 bg-white hover:bg-slate-200 border border-slate-200 rounded-lg font-mono font-bold text-amber-600 transition">22BCSE102 (71.0% ⚠️)</button>
-              <button type="button" onclick="setRoll('21BCA045')" class="px-2.5 py-1 bg-white hover:bg-slate-200 border border-slate-200 rounded-lg font-mono font-bold text-emerald-600 transition">21BCA045 (92.1%)</button> -->
             </div>
 
             <button type="submit" class="w-full py-3.5 px-6 rounded-2xl bg-brand-600 hover:bg-brand-700 text-white font-bold text-sm shadow-md shadow-brand-500/25 transition-all flex items-center justify-center gap-2">
@@ -620,7 +597,7 @@
       </div>
 
       <h3 class="text-lg font-bold text-slate-900 mb-1" id="modal-title">Document Title</h3>
-      <p class="text-xs text-slate-500 mb-4" id="modal-subtitle">File information & specifications</p>
+      <p class="text-xs text-slate-500 mb-4" id="modal-subtitle">File information &amp; specifications</p>
 
       <div class="p-4 rounded-2xl bg-slate-50 border border-slate-100 space-y-2 text-xs text-slate-600 mb-6" id="modal-body">
         <!-- Content inserted dynamically -->
@@ -654,7 +631,7 @@
           <h4 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Quick Navigation</h4>
           <ul class="space-y-2 text-xs">
             <li><a href="#home" class="hover:text-white transition">Home Dashboard</a></li>
-            <li><a href="#events" class="hover:text-white transition">Events & Hackathons</a></li>
+            <li><a href="#events" class="hover:text-white transition">Events &amp; Hackathons</a></li>
             <li><a href="#holidays" class="hover:text-white transition">Holidays Calendar</a></li>
             <li><a href="#attendance" class="hover:text-white transition">Attendance Tracker</a></li>
           </ul>
@@ -663,7 +640,7 @@
         <div>
           <h4 class="text-xs font-bold uppercase tracking-wider text-slate-200 mb-3">Academic Corner</h4>
           <ul class="space-y-2 text-xs">
-            <li><a href="#study-material" class="hover:text-white transition">Syllabus & Notes</a></li>
+            <li><a href="#study-material" class="hover:text-white transition">Syllabus &amp; Notes</a></li>
             <li><a href="#pyq" class="hover:text-white transition">Question Paper Bank</a></li>
             <li><a href="#attendance" class="hover:text-white transition">Eligibility Rules</a></li>
             <li><a href="#events" class="hover:text-white transition">Symposium Registrations</a></li>
@@ -687,714 +664,9 @@
     </div>
   </footer>
 
-  <!-- APPLICATION LOGIC JAVASCRIPT -->
-  <script>
-    /* ----------------------------------------------------
-       DATA STORES
-    ---------------------------------------------------- */
-    const eventsData = [
-      {
-        id: 1,
-        title: "TechVerve 2026: National Hackathon",
-        category: "Technical",
-        date: "Oct 28, 2026",
-        time: "09:00 AM - 06:00 PM",
-        venue: "Auditorium & Innovation Labs",
-        description: "36-hour code sprint focusing on Generative AI, IoT, and Cloud Computing with prizes worth ₹2,50,000.",
-        badgeColor: "bg-blue-100 text-blue-800 border-blue-200"
-      },
-      {
-        id: 2,
-        title: "Tarang: Annual Cultural Carnival",
-        category: "Cultural",
-        date: "Nov 14, 2026",
-        time: "04:30 PM Onwards",
-        venue: "Main Campus Open Grounds",
-        description: "Battle of the bands, classical dances, drama showcases, and celebrity musical night.",
-        badgeColor: "bg-purple-100 text-purple-800 border-purple-200"
-      },
-      {
-        id: 3,
-        title: "Inter-College Sports Olympiad",
-        category: "Sports",
-        date: "Nov 22, 2026",
-        time: "08:00 AM - 05:00 PM",
-        venue: "University Sports Complex",
-        description: "Football tournament, Cricket tournament, Badminton doubles, and track & field athletics.",
-        badgeColor: "bg-amber-100 text-amber-800 border-amber-200"
-      },
-      {
-        id: 4,
-        title: "Workshop on Next-Gen Cloud Architecture",
-        category: "Academic",
-        date: "Dec 02, 2026",
-        time: "10:30 AM - 01:30 PM",
-        venue: "Seminar Hall 2",
-        description: "Hands-on session on Kubernetes orchestration and serverless microservices delivered by industry architects.",
-        badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200"
-      },
-      {
-        id: 5,
-        title: "RoboWars: Combat Robotics Championship",
-        category: "Technical",
-        date: "Dec 10, 2026",
-        time: "11:00 AM - 04:00 PM",
-        venue: "Mechanical Workshop Arena",
-        description: "Custom-built 15kg and 30kg remote combat robots battle in an armored arena.",
-        badgeColor: "bg-blue-100 text-blue-800 border-blue-200"
-      },
-      {
-        id: 6,
-        title: "Research Paper Publishing Seminar",
-        category: "Academic",
-        date: "Dec 18, 2026",
-        time: "02:00 PM - 04:00 PM",
-        venue: "Library Conference Room",
-        description: "Guidance on IEEE / Springer index formatting, peer-review process, and indexing ethics for undergrads.",
-        badgeColor: "bg-emerald-100 text-emerald-800 border-emerald-200"
-      }
-    ];
+  <!-- External Script -->
 
-    const holidaysData = [
-      { date: "Oct 02, 2026", day: "Friday", occasion: "Mahatma Gandhi Jayanti", type: "Gazetted", duration: "1 Day" },
-      { date: "Oct 20, 2026", day: "Tuesday", occasion: "Dussehra (Vijay Dashami)", type: "Gazetted", duration: "1 Day" },
-      { date: "Nov 01, 2026", day: "Sunday", occasion: "Diwali (Deepavali Break)", type: "Gazetted", duration: "3 Days" },
-      { date: "Nov 15, 2026", day: "Sunday", occasion: "Guru Nanak Jayanti", type: "Gazetted", duration: "1 Day" },
-      { date: "Dec 25, 2026", day: "Friday", occasion: "Christmas Day", type: "Gazetted", duration: "1 Day" },
-      { date: "Jan 01, 2027", day: "Friday", occasion: "New Year's Day", type: "Restricted", duration: "1 Day" },
-      { date: "Jan 26, 2027", day: "Tuesday", occasion: "Republic Day", type: "Gazetted", duration: "1 Day" },
-      { date: "Mar 25, 2027", day: "Thursday", occasion: "Holi (Festival of Colors)", type: "Gazetted", duration: "2 Days" }
-    ];
-
-    const studyMaterialsData = [
-      {
-        id: 101,
-        title: "Data Structures & Algorithms Comprehensive Lecture Notes",
-        course: "B.Tech CSE",
-        semester: "Semester 3",
-        subject: "Data Structures & Algorithms",
-        faculty: "Dr. Arvind Rao",
-        size: "14.2 MB",
-        type: "PDF Slides & Notes",
-        downloads: "1,240"
-      },
-      {
-        id: 102,
-        title: "Operating Systems: Process Synchronization & Memory Paging",
-        course: "B.Tech CSE",
-        semester: "Semester 4",
-        subject: "Operating Systems",
-        faculty: "Prof. S. Meenakshi",
-        size: "8.5 MB",
-        type: "Handwritten Notes",
-        downloads: "890"
-      },
-      {
-        id: 103,
-        title: "Relational Database Management (SQL & Normalization Handbook)",
-        course: "BCA",
-        semester: "Semester 3",
-        subject: "Database Management (DBMS)",
-        faculty: "Er. Rohit Verma",
-        size: "19.1 MB",
-        type: "eBook & Lab Manual",
-        downloads: "1,610"
-      },
-      {
-        id: 104,
-        title: "Modern Web Technologies: HTML5, Tailwind & React Core",
-        course: "BCA",
-        semester: "Semester 4",
-        subject: "Web Technologies",
-        faculty: "Ms. Neha Gupta",
-        size: "11.3 MB",
-        type: "Source Code & PPTs",
-        downloads: "950"
-      },
-      {
-        id: 105,
-        title: "Computer Networks: OSI, TCP/IP & Socket Programming",
-        course: "B.Tech CSE",
-        semester: "Semester 5",
-        subject: "Computer Networks",
-        faculty: "Dr. K. N. Swamy",
-        size: "16.4 MB",
-        type: "Full Syllabus Bundle",
-        downloads: "780"
-      },
-      {
-        id: 106,
-        title: "Digital Electronics & Logic Gates Circuit Design",
-        course: "B.Tech ECE",
-        semester: "Semester 3",
-        subject: "Digital Electronics",
-        faculty: "Prof. Priya Nair",
-        size: "12.0 MB",
-        type: "Lab Handbook",
-        downloads: "620"
-      }
-    ];
-
-    const pyqData = [
-      {
-        id: 201,
-        title: "Data Structures & Algorithms - End-Term Paper",
-        code: "CS-301",
-        course: "B.Tech CSE",
-        semester: "Semester 3",
-        examType: "End-Term",
-        year: "2025",
-        pages: "6 Pages",
-        size: "1.4 MB"
-      },
-      {
-        id: 202,
-        title: "Operating Systems Concepts - Mid-Term Exam",
-        code: "CS-402",
-        course: "B.Tech CSE",
-        semester: "Semester 4",
-        examType: "Mid-Term",
-        year: "2024",
-        pages: "4 Pages",
-        size: "950 KB"
-      },
-      {
-        id: 203,
-        title: "Database Management Systems (DBMS) - Final University Exam",
-        code: "BCA-303",
-        course: "BCA",
-        semester: "Semester 3",
-        examType: "End-Term",
-        year: "2024",
-        pages: "8 Pages",
-        size: "2.1 MB"
-      },
-      {
-        id: 204,
-        title: "Computer Networks & Security - Unit Test 1",
-        code: "CS-501",
-        course: "B.Tech CSE",
-        semester: "Semester 5",
-        examType: "Unit Test",
-        year: "2025",
-        pages: "3 Pages",
-        size: "620 KB"
-      },
-      {
-        id: 205,
-        title: "Digital Logic Design & Integrated Circuits",
-        code: "EC-302",
-        course: "B.Tech ECE",
-        semester: "Semester 3",
-        examType: "End-Term",
-        year: "2023",
-        pages: "5 Pages",
-        size: "1.1 MB"
-      },
-      {
-        id: 206,
-        title: "Web Technologies & Web Services Final Paper",
-        code: "BCA-401",
-        course: "BCA",
-        semester: "Semester 4",
-        examType: "End-Term",
-        year: "2023",
-        pages: "6 Pages",
-        size: "1.3 MB"
-      }
-    ];
-
-    // Student Database Mock
-    const studentsDatabase = {
-      "4623010": {
-        name: "Raman Kumar",
-        roll: "4623010",
-        course: "B.Tech Computer Science & Engineering",
-        semester: "Semester 7",
-        avatar: "RK",
-        subjects: [
-          { name: "Cloud Computing & DevOps", attended: 37, total: 42 },
-          { name: "Advanced Machine Learning", attended: 35, total: 40 },
-          { name: "Information Security & Cyber Law", attended: 34, total: 38 },
-          { name: "Distributed Systems & Parallel Computing", attended: 38, total: 42 },
-          { name: "Major Project Phase - I", attended: 22, total: 24 }
-        ]
-      },
-      "22BCSE101": {
-        name: "Rahul Sharma",
-        roll: "22BCSE101",
-        course: "B.Tech Computer Science (CSE)",
-        semester: "Semester 5",
-        avatar: "RS",
-        subjects: [
-          { name: "Computer Networks", attended: 36, total: 40 },
-          { name: "Design & Analysis of Algorithms", attended: 34, total: 38 },
-          { name: "Theory of Computation", attended: 32, total: 40 },
-          { name: "Software Engineering", attended: 30, total: 36 },
-          { name: "Network Security Lab", attended: 28, total: 36 }
-        ]
-      },
-      "22BCSE102": {
-        name: "Ananya Iyer",
-        roll: "22BCSE102",
-        course: "B.Tech Computer Science (CSE)",
-        semester: "Semester 5",
-        avatar: "AI",
-        subjects: [
-          { name: "Computer Networks", attended: 26, total: 40 },
-          { name: "Design & Analysis of Algorithms", attended: 28, total: 38 },
-          { name: "Theory of Computation", attended: 25, total: 40 },
-          { name: "Software Engineering", attended: 27, total: 36 },
-          { name: "Network Security Lab", attended: 29, total: 36 }
-        ]
-      },
-      "21BCA045": {
-        name: "Vikas Patel",
-        roll: "21BCA045",
-        course: "Bachelor of Computer Applications (BCA)",
-        semester: "Semester 5",
-        avatar: "VP",
-        subjects: [
-          { name: "Cloud Computing Architectures", attended: 38, total: 40 },
-          { name: "Python with Data Science", attended: 37, total: 38 },
-          { name: "Cyber Law & Ethics", attended: 39, total: 40 },
-          { name: "Mobile App Development", attended: 33, total: 36 },
-          { name: "Project Lab 1", attended: 36, total: 36 }
-        ]
-      }
-    };
-
-    /* ----------------------------------------------------
-       TOAST SYSTEM (Replaces alert())
-    ---------------------------------------------------- */
-    function showToast(message, type = "success") {
-      const container = document.getElementById('toast-container');
-      const toast = document.createElement('div');
-      
-      const icons = {
-        success: 'fa-circle-check text-emerald-500',
-        info: 'fa-circle-info text-brand-500',
-        warning: 'fa-triangle-exclamation text-amber-500',
-        error: 'fa-circle-xmark text-red-500'
-      };
-
-      toast.className = 'pointer-events-auto flex items-center gap-3 px-4 py-3 bg-slate-900 text-white text-xs font-semibold rounded-2xl shadow-xl border border-slate-700/80 transition-all duration-300 transform translate-y-3 opacity-0';
-      toast.innerHTML = `
-        <i class="fa-solid ${icons[type] || icons.info} text-base shrink-0"></i>
-        <span>${message}</span>
-      `;
-      
-      container.appendChild(toast);
-      
-      // Animate in
-      requestAnimationFrame(() => {
-        toast.classList.remove('translate-y-3', 'opacity-0');
-      });
-
-      // Remove after 3.5s
-      setTimeout(() => {
-        toast.classList.add('opacity-0', 'translate-y-2');
-        setTimeout(() => toast.remove(), 300);
-      }, 3500);
-    }
-
-    /* ----------------------------------------------------
-       RENDER FUNCTIONS
-    ---------------------------------------------------- */
-    
-    // 1. Render Events
-    function renderEvents(filter = "all") {
-      const grid = document.getElementById('events-grid');
-      const filtered = filter === "all" 
-        ? eventsData 
-        : eventsData.filter(e => e.category.toLowerCase() === filter.toLowerCase());
-
-      grid.innerHTML = filtered.map(item => `
-        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="px-3 py-1 rounded-full text-[11px] font-bold border ${item.badgeColor}">
-                ${item.category}
-              </span>
-              <span class="text-xs font-semibold text-slate-500 flex items-center gap-1">
-                <i class="fa-regular fa-calendar text-brand-600"></i> ${item.date}
-              </span>
-            </div>
-            
-            <h3 class="text-base font-bold text-slate-900 mb-2 leading-snug">${item.title}</h3>
-            <p class="text-xs text-slate-600 mb-4 line-clamp-3 leading-relaxed">${item.description}</p>
-            
-            <div class="space-y-1.5 text-xs text-slate-500 pt-2 border-t border-slate-100">
-              <div class="flex items-center gap-2">
-                <i class="fa-regular fa-clock w-4 text-slate-400"></i>
-                <span>${item.time}</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fa-solid fa-location-dot w-4 text-slate-400"></i>
-                <span class="truncate">${item.venue}</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="pt-5 mt-4 border-t border-slate-100 flex items-center gap-2">
-            <button onclick="registerEvent('${item.title}')" class="flex-1 py-2.5 rounded-xl bg-slate-900 hover:bg-brand-600 text-white font-semibold text-xs transition-colors flex items-center justify-center gap-2">
-              <i class="fa-solid fa-ticket"></i> RSVP / Register
-            </button>
-            <button onclick="openModal('${item.title}', 'Event Information', 'Venue: ${item.venue}<br>Date: ${item.date} (${item.time})<br><br>Description: ${item.description}')" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs transition" title="View details">
-              <i class="fa-solid fa-arrow-up-right-from-square"></i>
-            </button>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // 2. Render Holidays
-    function renderHolidays(filterType = "all") {
-      const tbody = document.getElementById('holidays-table-body');
-      const badge = document.getElementById('holidays-count-badge');
-      const filtered = filterType === "all" 
-        ? holidaysData 
-        : holidaysData.filter(h => h.type.toLowerCase() === filterType.toLowerCase());
-
-      badge.textContent = `Showing ${filtered.length} holidays`;
-
-      tbody.innerHTML = filtered.map(item => `
-        <tr class="hover:bg-slate-50/80 transition-colors">
-          <td class="py-4 px-6 font-semibold text-slate-900 whitespace-nowrap">
-            <div class="flex items-center gap-2">
-              <i class="fa-regular fa-calendar-check text-brand-600"></i>
-              ${item.date}
-            </div>
-          </td>
-          <td class="py-4 px-6 text-slate-600 font-medium">${item.day}</td>
-          <td class="py-4 px-6 font-bold text-slate-800">${item.occasion}</td>
-          <td class="py-4 px-6">
-            <span class="px-2.5 py-1 rounded-full text-[11px] font-bold ${
-              item.type === 'Gazetted' 
-                ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' 
-                : 'bg-amber-50 text-amber-700 border border-amber-200'
-            }">
-              ${item.type}
-            </span>
-          </td>
-          <td class="py-4 px-6 text-right font-medium text-slate-600">${item.duration}</td>
-        </tr>
-      `).join('');
-    }
-
-    // 3. Render Study Materials
-    function renderStudyMaterials() {
-      const courseVal = document.getElementById('study-course').value;
-      const semVal = document.getElementById('study-semester').value;
-      const subjVal = document.getElementById('study-subject').value;
-      const grid = document.getElementById('study-materials-grid');
-      const empty = document.getElementById('study-empty-state');
-
-      const filtered = studyMaterialsData.filter(item => {
-        const matchCourse = (courseVal === 'all' || item.course === courseVal);
-        const matchSem = (semVal === 'all' || item.semester === semVal);
-        const matchSubj = (subjVal === 'all' || item.subject === subjVal);
-        return matchCourse && matchSem && matchSubj;
-      });
-
-      if (filtered.length === 0) {
-        grid.innerHTML = '';
-        empty.classList.remove('hidden');
-        return;
-      }
-
-      empty.classList.add('hidden');
-      grid.innerHTML = filtered.map(item => `
-        <div class="bg-white rounded-3xl p-6 border border-slate-200 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
-          <div>
-            <div class="flex items-start justify-between gap-3 mb-3">
-              <span class="px-2.5 py-1 rounded-lg text-[10px] font-bold uppercase tracking-wider bg-indigo-50 text-indigo-700">
-                ${item.course}
-              </span>
-              <span class="text-[11px] font-medium text-slate-500">${item.semester}</span>
-            </div>
-
-            <h3 class="font-bold text-slate-900 text-sm mb-2 leading-snug">${item.title}</h3>
-            
-            <div class="space-y-1.5 text-xs text-slate-500 mt-4 mb-5">
-              <div class="flex items-center gap-2">
-                <i class="fa-solid fa-chalkboard-user text-slate-400 w-4"></i>
-                <span>${item.faculty}</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fa-solid fa-file-lines text-slate-400 w-4"></i>
-                <span>${item.type} • ${item.size}</span>
-              </div>
-              <div class="flex items-center gap-2">
-                <i class="fa-solid fa-download text-slate-400 w-4"></i>
-                <span>${item.downloads} downloads</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="flex items-center gap-2 pt-4 border-t border-slate-100">
-            <button onclick="openModal('${item.title}', '${item.course} • ${item.semester}', 'Subject: ${item.subject}<br>Author: ${item.faculty}<br>File Type: ${item.type}<br>Size: ${item.size}')" class="flex-1 py-2.5 rounded-xl bg-brand-600 hover:bg-brand-700 text-white font-semibold text-xs transition flex items-center justify-center gap-2">
-              <i class="fa-solid fa-download"></i> Get Notes
-            </button>
-            <button onclick="showToast('Bookmark added to your profile!', 'info')" class="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 text-xs transition" title="Save">
-              <i class="fa-regular fa-bookmark"></i>
-            </button>
-          </div>
-        </div>
-      `).join('');
-    }
-
-    // 4. Render PYQs
-    function renderPYQs() {
-      const course = document.getElementById('pyq-course').value;
-      const sem = document.getElementById('pyq-sem').value;
-      const examType = document.getElementById('pyq-type').value;
-      const year = document.getElementById('pyq-year').value;
-      const tbody = document.getElementById('pyq-table-body');
-      const empty = document.getElementById('pyq-empty-state');
-
-      const filtered = pyqData.filter(item => {
-        const matchCourse = (course === 'all' || item.course === course);
-        const matchSem = (sem === 'all' || item.semester === sem);
-        const matchType = (examType === 'all' || item.examType === examType);
-        const matchYear = (year === 'all' || item.year === year);
-        return matchCourse && matchSem && matchType && matchYear;
-      });
-
-      if (filtered.length === 0) {
-        tbody.innerHTML = '';
-        empty.classList.remove('hidden');
-        return;
-      }
-
-      empty.classList.add('hidden');
-      tbody.innerHTML = filtered.map(item => `
-        <tr class="hover:bg-slate-50 transition-colors">
-          <td class="py-4 px-6">
-            <div class="font-bold text-slate-900">${item.title}</div>
-            <div class="text-[11px] font-mono text-slate-500">Subject Code: ${item.code} • ${item.pages}</div>
-          </td>
-          <td class="py-4 px-6">
-            <div class="text-xs font-semibold text-slate-700">${item.course}</div>
-            <div class="text-[11px] text-slate-500">${item.semester}</div>
-          </td>
-          <td class="py-4 px-6">
-            <span class="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-slate-100 text-slate-700">
-              ${item.examType}
-            </span>
-          </td>
-          <td class="py-4 px-6 font-bold text-slate-800 text-xs">${item.year}</td>
-          <td class="py-4 px-6 text-center">
-            <button onclick="openModal('${item.title} (${item.year})', 'Exam Paper Code: ${item.code}', 'Format: Official University Endorsed PDF<br>Pages: ${item.pages}<br>Size: ${item.size}')" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-brand-600 text-white text-xs font-semibold transition inline-flex items-center gap-1.5 shadow-sm">
-              <i class="fa-solid fa-file-arrow-down"></i> PDF
-            </button>
-          </td>
-        </tr>
-      `).join('');
-    }
-
-    // 5. Attendance Lookup System
-    function handleAttendanceLookup(rollNo) {
-      const cleanRoll = rollNo.trim().toUpperCase();
-      const student = studentsDatabase[cleanRoll];
-
-      if (!student) {
-        showToast(`Roll Number "${cleanRoll}" not found. Try sample roll 22BCSE101`, 'warning');
-        return;
-      }
-
-      // Populate Student Profile Details
-      document.getElementById('res-name').textContent = student.name;
-      document.getElementById('res-roll').textContent = student.roll;
-      document.getElementById('res-course').textContent = student.course;
-      document.getElementById('res-sem').textContent = student.semester;
-      document.getElementById('res-avatar').textContent = student.avatar;
-
-      // Calculate Aggregate
-      let totalHeld = 0;
-      let totalAttended = 0;
-      student.subjects.forEach(s => {
-        totalHeld += s.total;
-        totalAttended += s.attended;
-      });
-
-      const aggregate = ((totalAttended / totalHeld) * 100).toFixed(1);
-      document.getElementById('res-percent').textContent = `${aggregate}%`;
-      document.getElementById('res-attended-ratio').textContent = `${totalAttended} / ${totalHeld}`;
-
-      const statusBadge = document.getElementById('res-status-badge');
-      const adviceText = document.getElementById('attendance-advice-text');
-      const alertBox = document.getElementById('attendance-alert-box');
-
-      if (aggregate >= 75) {
-        statusBadge.className = 'px-3 py-0.5 rounded-full text-xs font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30';
-        statusBadge.textContent = 'Eligible for Exams';
-        alertBox.innerHTML = `
-          <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-          <span>Great attendance record! Your score exceeds the university minimum standard of 75%.</span>
-        `;
-      } else {
-        statusBadge.className = 'px-3 py-0.5 rounded-full text-xs font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30';
-        statusBadge.textContent = 'Low Attendance Warning';
-        
-        // Classes needed formula: (attended + x) / (total + x) >= 0.75 => x >= (0.75 * total - attended) / 0.25
-        const needed = Math.max(0, Math.ceil((0.75 * totalHeld - totalAttended) / 0.25));
-        alertBox.innerHTML = `
-          <i class="fa-solid fa-triangle-exclamation text-amber-400 text-base"></i>
-          <span><strong>Action Required:</strong> Attendance is under 75%. You need to attend the next <strong>${needed} consecutive classes</strong> to regain eligibility.</span>
-        `;
-      }
-
-      // Render Subject Rows
-      const tbody = document.getElementById('attendance-breakdown-body');
-      tbody.innerHTML = student.subjects.map(subj => {
-        const subPct = ((subj.attended / subj.total) * 100).toFixed(1);
-        const isOk = subPct >= 75;
-        
-        return `
-          <tr class="hover:bg-slate-50/70 transition-colors">
-            <td class="py-3 px-6 font-semibold text-slate-800">${subj.name}</td>
-            <td class="py-3 px-6 text-slate-600 font-mono font-medium">${subj.attended}</td>
-            <td class="py-3 px-6 text-slate-600 font-mono font-medium">${subj.total}</td>
-            <td class="py-3 px-6">
-              <div class="flex items-center gap-2">
-                <span class="font-bold text-xs ${isOk ? 'text-emerald-600' : 'text-amber-600'}">${subPct}%</span>
-                <div class="w-16 bg-slate-200 h-1.5 rounded-full overflow-hidden">
-                  <div class="h-full ${isOk ? 'bg-emerald-500' : 'bg-amber-500'}" style="width: ${subPct}%"></div>
-                </div>
-              </div>
-            </td>
-            <td class="py-3 px-6">
-              <span class="px-2 py-0.5 rounded-full text-[10px] font-bold ${isOk ? 'bg-emerald-100 text-emerald-800' : 'bg-red-100 text-red-800'}">
-                ${isOk ? 'Good' : 'Defaulter'}
-              </span>
-            </td>
-            <td class="py-3 px-6 text-right text-xs font-medium text-slate-500">
-              ${isOk ? 'Regular' : 'Needs attention'}
-            </td>
-          </tr>
-        `;
-      }).join('');
-
-      // Show result section & smooth scroll
-      const resultEl = document.getElementById('attendance-result');
-      resultEl.classList.remove('hidden');
-      resultEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-      showToast(`Loaded records for ${student.name}`, 'success');
-    }
-
-    function setRoll(roll) {
-      const input = document.getElementById('roll-input');
-      input.value = roll;
-      handleAttendanceLookup(roll);
-    }
-
-    function registerEvent(title) {
-      showToast(`Registration request received for "${title}"! Check your college email.`, 'success');
-    }
-
-    /* ----------------------------------------------------
-       MODAL HANDLING
-    ---------------------------------------------------- */
-    function openModal(title, subtitle, bodyHtml) {
-      const modal = document.getElementById('action-modal');
-      document.getElementById('modal-title').textContent = title;
-      document.getElementById('modal-subtitle').textContent = subtitle;
-      document.getElementById('modal-body').innerHTML = bodyHtml;
-      modal.classList.remove('hidden');
-    }
-
-    function closeModal() {
-      document.getElementById('action-modal').classList.add('hidden');
-    }
-
-    function triggerSimulatedDownload() {
-      closeModal();
-      showToast('Preparing PDF package... Download will start automatically!', 'info');
-    }
-
-    /* ----------------------------------------------------
-       EVENT LISTENERS INITIALIZATION
-    ---------------------------------------------------- */
-    document.addEventListener('DOMContentLoaded', () => {
-      // 1. Initial Renders
-      renderEvents('all');
-      renderHolidays('all');
-      renderStudyMaterials();
-      renderPYQs();
-
-      // 2. Mobile Menu Toggle
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuIcon = document.getElementById('menu-icon');
-
-      mobileBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
-        if (mobileMenu.classList.contains('hidden')) {
-          menuIcon.className = 'fa-solid fa-bars text-xl';
-        } else {
-          menuIcon.className = 'fa-solid fa-xmark text-xl';
-        }
-      });
-
-      // Close mobile menu on link click
-      document.querySelectorAll('.mobile-nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          menuIcon.className = 'fa-solid fa-bars text-xl';
-        });
-      });
-
-      // 3. Event Category Filters
-      document.querySelectorAll('.event-filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.event-filter-btn').forEach(b => {
-            b.classList.remove('bg-brand-600', 'text-white');
-            b.classList.add('bg-slate-100', 'text-slate-600');
-          });
-          btn.classList.add('bg-brand-600', 'text-white');
-          btn.classList.remove('bg-slate-100', 'text-slate-600');
-          renderEvents(btn.dataset.filter);
-        });
-      });
-
-      // 4. Holiday Filters
-      document.querySelectorAll('.holiday-filter-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-          document.querySelectorAll('.holiday-filter-btn').forEach(b => {
-            b.classList.remove('bg-brand-600', 'text-white');
-            b.classList.add('text-slate-600');
-          });
-          btn.classList.add('bg-brand-600', 'text-white');
-          btn.classList.remove('text-slate-600');
-          renderHolidays(btn.dataset.type);
-        });
-      });
-
-      // 5. Study Material Filters
-      ['study-course', 'study-semester', 'study-subject'].forEach(id => {
-        document.getElementById(id).addEventListener('change', renderStudyMaterials);
-      });
-
-      // 6. PYQ Filters
-      ['pyq-course', 'pyq-sem', 'pyq-type', 'pyq-year'].forEach(id => {
-        document.getElementById(id).addEventListener('change', renderPYQs);
-      });
-
-      // 7. Attendance Lookup Form
-      document.getElementById('attendance-form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        const roll = document.getElementById('roll-input').value;
-        handleAttendanceLookup(roll);
-      });
-
-      // 8. Close modal on backdrop click
-      document.getElementById('action-modal').addEventListener('click', (e) => {
-        if (e.target.id === 'action-modal') {
-          closeModal();
-        }
-      });
-    });
-  </script>
+  <div>klookkkook</div>
+  <script src="scripit.js"></script>
 </body>
 </html>
